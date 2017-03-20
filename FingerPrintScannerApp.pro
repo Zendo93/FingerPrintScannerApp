@@ -11,7 +11,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = FingerPrintScannerApp
 TEMPLATE = app
 INCLUDEPATH += "C:\TeamProject\FingerPrintScannerApp\FingerPrintScanner"
-
+CONFIG += console
 SOURCES += main.cpp\
         mainwindow.cpp \
     FingerPrintScanner/fingerprintscanner.cpp
@@ -27,8 +27,8 @@ HEADERS  += mainwindow.h \
 
 FORMS    += mainwindow.ui
 
-LIBS += "$$PWD/FingerPrintScanner/lib/x64/fxISO_64.lib"
-LIBS += "$$PWD/FingerPrintScanner/lib/x64/fxISOenrdlg_64.lib"
-LIBS += "$$PWD/FingerPrintScanner/lib/x64/FingerPrintScanner.lib"
-CONFIG += console
+LIBS += "C:/TeamProject/FingerPrintScannerApp/FingerPrintScanner/lib/x64/fxISO_64.lib"
+LIBS += "C:/TeamProject/FingerPrintScannerApp/FingerPrintScanner/lib/x64/fxISOenrdlg_64.lib"
+LIBS += "C:/TeamProject/FingerPrintScannerApp/FingerPrintScanner/lib/x64/FingerPrintScannerDLL.lib"
+
 win32-msvc*: QMAKE_LFLAGS += /DYNAMICBASE:NO
